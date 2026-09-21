@@ -1,0 +1,25 @@
+PÁGINA ROMÁNTICA — BETSABÉ · 21 DE SEPTIEMBRE DE 2026
+
+Abre index.html en un navegador para ver la página.
+
+Incluye:
+- Animación de flores amarillas y pétalos.
+- Portada romántica con Betsabé y Gina/Gia.
+- Galería con las 14 fotos enviadas.
+- Lightbox para ampliar cada recuerdo.
+- Carta completa con sobre animado.
+- Botón para reproducir “Princesa” de Río Roma ft. CNCO mediante el video oficial de YouTube.
+- Diseño adaptable para celular y computadora.
+
+IMPORTANTE SOBRE LA MÚSICA:
+La página usa el video oficial de YouTube dentro de la página, por lo que necesita internet para reproducir la canción. No se incluye un archivo de audio con copyright dentro del paquete.
+
+Para publicar la página:
+1. Sube todos los archivos y la carpeta “fotos” a tu servicio de hosting.
+2. Mantén la estructura de carpetas.
+3. Abre index.html o el dominio donde la publiques.
+
+
+ACCESO PRIVADO
+La página comienza con una pantalla de contraseña. La contraseña configurada es: elquequierelohace
+Nota: esta protección es de acceso visual en el navegador; no es un sistema de seguridad para datos sensibles.

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17261d">
+<meta name="description" content="Un pequeño jardín de recuerdos para Betsabé, 21 de septiembre de 2026.">
+<title>Para Betsabé — 21 de septiembre de 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="petals" aria-hidden="true"></div>
+<!-- ACCESO PRIVADO -->
+<div class="password-screen" id="passwordScreen" aria-label="Acceso privado">
+  <div class="password-petal p1">🌻</div><div class="password-petal p2">✦</div><div class="password-petal p3">🌻</div>
+  <div class="password-card">
+    <p class="eyebrow">UN REGALO SOLO PARA TI</p>
+    <div class="password-flower">🌻</div>
+    <h1>Antes de entrar...</h1>
+    <p>Hay una pequeña palabra que abre este recuerdo.</p>
+    <form id="passwordForm" autocomplete="off">
+      <label for="passwordInput">Contraseña</label>
+      <div class="password-input-wrap">
+        <input id="passwordInput" type="password" placeholder="Escribe la palabra secreta" spellcheck="false" autocomplete="off">
+        <button type="button" id="togglePassword" aria-label="Mostrar contraseña">◉</button>
+      </div>
+      <button class="password-submit" type="submit">Abrir mi regalo <span>→</span></button>
+      <p class="password-error" id="passwordError" aria-live="polite"></p>
+    </form>
+    <p class="password-footer">Con cariño, Gina · Gia 💛</p>
+  </div>
+</div>
+
+
+<!-- PORTADA -->
+<div class="opening" id="opening">
+  <div class="opening-noise"></div>
+  <div class="sun-disc" aria-hidden="true"></div>
+  <div class="opening-flower" aria-hidden="true"><span class="flower-head"></span><span class="flower-stem"></span></div>
+  <div class="opening-content">
+    <p class="eyebrow">21 · 09 · 2026</p>
+    <p class="tiny-label">UN PEQUEÑO REGALO PARA TI</p>
+    <h1>Para <em>Betsabé</em></h1>
+    <p class="opening-copy">Una historia hecha de momentos, abrazos y flores amarillas.</p>
+    <button class="primary" id="openBtn">Entrar al jardín <span>→</span></button>
+    <p class="small-note">Hecho con amor por Gina · Gia</p>
+  </div>
+  <div class="opening-bottom">desliza después de abrir · <span>🌻</span></div>
+</div>
+
+<main id="main" class="hidden">
+  <!-- NAVEGACIÓN -->
+  <nav class="topbar" aria-label="Navegación de la página">
+    <a href="#inicio" class="brand">G <span>×</span> B</a>
+    <div class="navlinks">
+      <a href="#recuerdos">Recuerdos</a>
+      <a href="#historia">Nuestra historia</a>
+      <a href="#juegos">Juegos</a>
+      <a href="#carta">Carta</a>
+    </div>
+    <button class="nav-music" id="musicBtn">♫ <span>Princesa</span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-stars" aria-hidden="true"></div>
+    <div class="hero-flower flower-a" aria-hidden="true"></div>
+    <div class="hero-flower flower-b" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow light">PARA MI NIÑA · 21 DE SEPTIEMBRE DE 2026</p>
+      <h2>Mi <span>princesa</span></h2>
+      <p class="subtitle">Betsabé, preparé este pequeño rincón para guardar algo que nunca quiero olvidar: <strong>todo lo bonito que hemos vivido juntas.</strong></p>
+      <div class="hero-actions">
+        <a class="gold-button" href="#recuerdos">Comenzar el recorrido ↓</a>
+        <button class="ghost-button" id="musicBtnHero">Escuchar nuestra canción ♫</button>
+      </div>
+    </div>
+    <div class="hero-bottom-note">Un recuerdo a la vez · una flor a la vez</div>
+  </section>
+
+  <!-- GUÍA -->
+  <section class="guide section-pad">
+    <div class="section-intro centered">
+      <p class="eyebrow">Un recorrido para ti</p>
+      <h3>Hay tres cosas que quiero regalarte hoy.</h3>
+      <p>Recorre la página con calma. Primero mira nuestros recuerdos, después nuestra pequeña historia y, al final, abre la carta que escribí para ti.</p>
+    </div>
+    <div class="steps">
+      <a href="#recuerdos" class="step-card"><span>01</span><div class="step-icon">✦</div><h4>Recuerdos</h4><p>14 fotografías que guardan pedacitos de nosotras.</p><b>Ver recuerdos →</b></a>
+      <a href="#historia" class="step-card"><span>02</span><div class="step-icon">♡</div><h4>Nuestra historia</h4><p>Pequeños detalles que hacen especial nuestro camino.</p><b>Continuar →</b></a>
+      <a href="#juegos" class="step-card"><span>03</span><div class="step-icon">✦</div><h4>Juegos</h4><p>Pequeñas sorpresas para descubrir jugando.</p><b>Jugar →</b></a>
+      <a href="#carta" class="step-card"><span>04</span><div class="step-icon">✉</div><h4>Mi carta</h4><p>Unas palabras que quiero que puedas volver a leer.</p><b>Abrir carta →</b></a>
+    </div>
+  </section>
+
+  <!-- RECUERDOS -->
+  <section class="gallery-section section-pad" id="recuerdos">
+    <div class="section-heading">
+      <div><p class="eyebrow">01 · Recuerdos</p><h3>Momentos que quiero guardar contigo</h3></div>
+      <p class="counter">14 fotografías · infinitos motivos</p>
+    </div>
+    <div class="gallery" id="gallery">
+      <figure class="memory-card tall"><img src="fotos/01.jpg" alt="Recuerdo juntas" loading="lazy"><figcaption><small>RECUERDO 01</small>Un momento que se quedó conmigo.</figcaption></figure>
+      <figure class="memory-card"><img src="fotos/02.jpg" alt="Recuerdo juntas frente a un lugar iluminado" loading="lazy"><figcaption><small>RECUERDO 02</small>Donde sea, pero contigo.</figcaption></figure>
+      <figure class="memory-card wide"><img src="fotos/03.jpg" alt="Recuerdo juntas frente al espejo" loading="lazy"><figcaption><small>RECUERDO 03</small>Nosotras, tal como somos.</figcaption></figure>
+      <figure class="memory-card"><img src="fotos/04.jpg" alt="Recuerdo juntas en la noche" loading="lazy"><figcaption><small>RECUERDO 04</small>Una noche para recordar.</figcaption></figure>
+      <figure class="memory-card tall"><img src="fotos/05.jpg" alt="Recuerdo juntas" loading="lazy"><figcaption><small>RECUERDO 05</small>Hasta en los días cansados, tú.</figcaption></figure>
+      <figure class="memory-card"><img src="fotos/06.jpg" alt="Recuerdo juntas junto al mar" loading="lazy"><figcaption><small>RECUERDO 06</small>Abrazos que dicen más que palabras.</figcaption></figure>
+      <figure class="memory-card"><img src="fotos/07.jpg" alt="Recuerdo juntas en una habitación" loading="lazy"><figcaption><small>RECUERDO 07</small>Nuestro pequeño mundo.</figcaption></figure>
+      <figure class="memory-card wide"><img src="fotos/08.jpg" alt="Recuerdo divertido juntas" loading="lazy"><figcaption><small>RECUERDO 08</small>También amo nuestras locuras.</figcaption></figure>
+      <figure class="memory-card"><img src="fotos/09.jpg" alt="Recuerdo juntas" loading="lazy"><figcaption><small>RECUERDO 09</small>Mi lugar favorito: cerca de ti.</figcaption></figure>
+      <figure class="memory-card tall"><img src="fotos/10.jpg" alt="Recuerdo juntas" loading="lazy"><figcaption><small>RECUERDO 10</small>Siempre encuentro una razón para mirarte.</figcaption></figure>
+      <figure class="memory-card"><img src="fotos/11.jpg" alt="Recuerdo juntas" loading="lazy"><figcaption><small>RECUERDO 11</small>Un pedacito de nuestra historia.</figcaption></figure>
+      <figure class="memory-card"><img src="fotos/12.jpg" alt="Recuerdo juntas" loading="lazy"><figcaption><small>RECUERDO 12</small>Dos manos, un corazón.</figcaption></figure>
+      <figure class="memory-card"><img src="fotos/13.jpg" alt="Recuerdo juntas" loading="lazy"><figcaption><small>RECUERDO 13</small>Gracias por cada instante.</figcaption></figure>
+      <figure class="memory-card tall"><img src="fotos/14.jpg" alt="Flores amarillas y regalo" loading="lazy"><figcaption><small>RECUERDO 14</small>Y que nunca nos falten flores. 🌻</figcaption></figure>
+    </div>
+    <p class="gallery-tip">Toca cualquier fotografía para verla completa.</p>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="story section-pad" id="historia">
+    <div class="section-intro centered">
+      <p class="eyebrow">02 · Nuestra historia</p>
+      <h3>Lo que más me gusta de nosotras</h3>
+      <p>No es una sola fotografía ni un solo día. Es la suma de todos esos pequeños momentos que, juntos, se volvieron nuestra historia.</p>
+    </div>
+    <div class="story-line">
+      <div class="story-item"><div class="story-dot">01</div><div><span>LOS MOMENTOS</span><h4>Reír contigo</h4><p>Porque incluso las cosas más simples se vuelven especiales cuando las compartimos.</p></div></div>
+      <div class="story-item"><div class="story-dot">02</div><div><span>LOS ABRAZOS</span><h4>Sentirme en casa</h4><p>Hay abrazos que no necesitan explicación. Los tuyos son de esos.</p></div></div>
+      <div class="story-item"><div class="story-dot">03</div><div><span>LOS SUEÑOS</span><h4>Verte florecer</h4><p>Me hace feliz imaginar todo lo que todavía te queda por descubrir y lograr.</p></div></div>
+      <div class="story-item"><div class="story-dot">04</div><div><span>LO QUE VIENE</span><h4>Seguir eligiéndonos</h4><p>Quiero seguir coleccionando recuerdos contigo, uno por uno, sin prisa.</p></div></div>
+    </div>
+  </section>
+
+
+  <!-- JUEGOS -->
+  <section class="games-section section-pad" id="juegos">
+    <div class="section-intro centered">
+      <p class="eyebrow">03 · Un momento para jugar</p>
+      <h3>Raspa, descubre y guarda una sorpresa</h3>
+      <p>Preparé unas palabras para ti. Raspa las tarjetas con el dedo o el mouse y descubre lo que esconden. Puedes renovar las sorpresas cuando quieras.</p>
+    </div>
+    <div class="games-grid">
+      <article class="game-card scratch-game">
+        <div class="game-title"><span>01</span><div><small>RASPA Y DESCUBRE</small><h4>Palabras para ti</h4></div></div>
+        <p class="game-help">Raspa al menos la mitad de cada tarjeta para revelar el mensaje.</p>
+        <div class="scratch-grid" id="scratchGrid" aria-label="Tarjetas para raspar"></div>
+        <button class="game-button" id="refreshScratch" type="button">Nuevas palabras ↻</button>
+      </article>
+      <article class="game-card flower-game">
+        <div class="game-title"><span>02</span><div><small>ELIGE UNA FLOR</small><h4>Una sorpresa al azar</h4></div></div>
+        <p class="game-help">Elige una flor amarilla. Cada una guarda un pequeño mensaje.</p>
+        <div class="flower-choices" id="flowerChoices">
+          <button type="button" aria-label="Flor 1">🌻</button><button type="button" aria-label="Flor 2">🌼</button><button type="button" aria-label="Flor 3">🌻</button>
+        </div>
+        <div class="flower-message" id="flowerMessage" aria-live="polite">Toca una flor para descubrir tu mensaje.</div>
+      </article>
+    </div>
+    <p class="edit-note">Puedes cambiar fácilmente las palabras y mensajes desde <strong>script.js</strong>, en las listas <strong>SCRATCH_WORDS</strong> y <strong>FLOWER_MESSAGES</strong>.</p>
+  </section>
+
+  <!-- CARTA -->
+  <section class="letter-section section-pad" id="carta">
+    <div class="section-intro centered letter-intro">
+      <p class="eyebrow">04 · Mi carta</p>
+      <h3>Hay algo que quiero decirte.</h3>
+      <p>Cuando estés lista, abre el sobre. Esta parte es solo para ti.</p>
+    </div>
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="letter-paper">
+          <p class="letter-to">Para mi Betsabé, mi amor: 🌻💛</p>
+          <p>Hoy, 21 de septiembre, quiero recordarte lo increíblemente especial que eres para mí.</p>
+          <p>Sé que septiembre es un mes importante para ti. No solo por este día, sino también porque nos recuerda la importancia de hablar sobre la salud mental y la prevención del suicidio. Tú has vivido momentos muy difíciles, momentos en los que quizás seguir adelante parecía imposible. Pero lo hiciste. Estás aquí, y eso me llena de orgullo.</p>
+          <p>Eres la mujer más fuerte y resiliente que conozco. No porque nunca hayas sentido dolor, miedo o tristeza, sino porque, a pesar de todo lo que has vivido, encontraste la fuerza para continuar y convertirte en la maravillosa mujer que eres hoy.</p>
+          <p>Quiero que nunca olvides que yo estoy aquí. Para escucharte, abrazarte y acompañarte en cada momento. No tienes que ser fuerte todo el tiempo conmigo; también puedes descansar, llorar y simplemente dejarte querer.</p>
+          <p>Esto es un pequeño detalle para recordarte que, incluso después de los días más difíciles, siempre puede volver a florecer la vida. Y tú eres la prueba más bonita de ello.</p>
+          <p>Me siento profundamente orgulloso de ti, de todo lo que has superado y de todo lo que aún vas a lograr.</p>
+          <p>Gracias por seguir aquí. Gracias por existir. Y gracias por permitirme amarte.</p>
+          <p>Te amo muchísimo, mi niña. 💛</p>
+          <p>Y quiero seguir a tu lado, viendo cómo floreces y cumples cada uno de tus sueños.</p>
+          <p>Feliz 21 de septiembre, mi amor. 🌻🌷</p>
+          <div class="signature">Con todo mi amor,<br><strong>Gina · Gia</strong></div>
+        </div>
+      </div>
+      <button class="letter-button" id="letterBtn">Abrir mi carta <span>✉</span></button>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="final-section">
+    <div class="final-glow"></div>
+    <div class="final-flowers" aria-hidden="true"><span class="sunflower s1"></span><span class="sunflower s2"></span><span class="sunflower s3"></span><span class="sunflower s4"></span></div>
+    <div class="final-content">
+      <p class="eyebrow light">PARA TERMINAR ESTE PEQUEÑO VIAJE</p>
+      <h3>Que siempre<br><em>volvamos a florecer.</em></h3>
+      <p>Gracias por existir, por compartir tu mundo conmigo y por dejarme ser parte de tu historia.</p>
+      <div class="heart-line">♡ &nbsp; 🌻 &nbsp; ♡</div>
+      <p class="from">Con amor, Gina</p>
+      <div class="date-line">21 · 09 · 2026</div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="close" id="closeLightbox" aria-label="Cerrar">×</button><img id="lightboxImg" src="" alt="Recuerdo ampliado"><p id="lightboxCaption"></p></div>
+<div class="music-modal" id="musicModal" aria-hidden="true"><div class="music-box"><button class="close music-close" id="musicClose" aria-label="Cerrar">×</button><div class="mini-flower">🌻</div><p class="eyebrow">NUESTRA CANCIÓN</p><h3>Princesa</h3><p>Río Roma ft. CNCO</p><div class="video-frame"><iframe id="songFrame" src="https://www.youtube.com/embed/3CEHlKe-1QU?rel=0" title="Río Roma - Princesa" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><p class="tiny">La reproducción necesita conexión a internet. También puedes activar la melodía romántica de fondo desde el botón de música.</p></div></div>
+<script src="script.js"></script>
+</body>
+</html>
